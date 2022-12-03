@@ -1,0 +1,30 @@
+extends layout
+
+block content 
+    h1 Make a new post
+    a(
+        href='/'
+    ) Back
+    form(
+        method='POST' 
+        action='/new'
+        )
+        label(
+            for='message'
+        ) Message:
+        input(
+            type='text'
+            id='message'
+            name='message'
+        )
+        label(
+            for='username'
+        ) Username:
+        input(
+            type='text'
+            id='username'
+            name='username'
+        )
+        button(
+            type='submit'
+        ) Submit
