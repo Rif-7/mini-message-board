@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each message in  messages
+      li
+        div(style="font-size: 24px;")= message.text
+        div by #{message.user} on #{message.added.toDateString()}
+      hr
+
+
